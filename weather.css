@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+}
+
+header {
+    background-color: slategray;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#searchHistory {
+    margin-top: 10px;
+}
+
+#weather {
+    margin-top: 15px;
+}
