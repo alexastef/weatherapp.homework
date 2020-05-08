@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<header><h2>Weather Dashboard</h2></header>
+<div class="container">
+    <!-- One Big Row with 2 subrows and two columns -->
+    <div class="row">
+    <!-- Search Colum -->
+        <div class="col-sm-4" id="searchHistory">
+            <label for="citySearch">Search for a City: </label>
+            <!-- Input area with Search/Submit Button -->
+            <div class="input-group mb-3">
+            <input type="text" class="form-control" ariadescribedby="basic-addon2" id="searchCity">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
+            </div>
+            </div>
+
+            <!-- List Group with most recent city appended to the top -->
+            <div class="card" id="recentCities">
+                <ul class="list-group list-group-flush">
+                </ul>
+            </div>
+        </div>
+
+    <!-- Weather Column-->
+    <div class="col-sm-8" id="weather">
+        <!-- Current weather Card-->
+        <div class="card" style="display:none" id="currentWeather">
+            <!-- Current Weather will be appended to the below card-body -->
+            <div class="card-body weatherReport">
+            </div>
+        </div>
+        
+        <!-- 5 Day Forecast is individual cards-->
+        <div class="weatherForecast" style="display: none">
+            <h5 class="forecast">5-Day Forecast</h5>
+            <div class="row forecastRow row-cols-5">
+            <!-- <div class="col-sm">
+                <div class="card">
+                    <div class="card-body-forecast">
+                        <h3 class="card-title"></h3>
+                        <p class="card=text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm one">
+                <div class="card first">
+                    <div class="card-body-forecast">
+                        <h3 class="card-title"></h3>
+                        <p class="card=text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body-forecast">
+                        <h3 class="card-title"></h3>
+                        <p class="card=text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body-forecast">
+                        <h3 class="card-title"></h3>
+                        <p class="card=text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body-forecast">
+                        <h3 class="card-title"></h3>
+                        <p class="card=text"></p>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+    
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="weather.js"></script>
+</body>
+</html>
