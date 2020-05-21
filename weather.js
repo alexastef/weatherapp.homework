@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 // Create global variables
   var searchBtn = $("#searchBtn");
-  var baseUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
+  var baseUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
   var apiKey = "d059ce46f32043aab54a12981f788806";
   var currentDate = moment().format("l");
 
@@ -59,7 +59,7 @@ $(document).ready(function () {
         // Show Weather Card
         $("#currentWeather").attr("style", "display: block");
         // Find weather icon
-        var weatherIcon = "<img src='http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png'/>";
+        var weatherIcon = "<img src='https://openweathermap.org/img/w/" + weather.weather[0].icon + ".png'/>";
         var weatherReport = $(".weatherReport");
         // Empty any data on card showing current weather
         weatherReport.empty();
@@ -73,7 +73,7 @@ $(document).ready(function () {
         weatherReport.append($("<p class='card-text'>Wind Speed: " + weather.wind.speed + "MPH</p>"));
         // this requires a different call using the latitude and longitude from first call
         var UVindexURL =
-          "http://api.openweathermap.org/data/2.5/uvi?lat=" + weather.coord.lat + "&lon=" + weather.coord.lon + "&appid=" + apiKey;
+          "https://api.openweathermap.org/data/2.5/uvi?lat=" + weather.coord.lat + "&lon=" + weather.coord.lon + "&appid=" + apiKey;
 
         $.ajax({
           url: UVindexURL,
@@ -129,7 +129,7 @@ $(document).ready(function () {
   function getForecast(inVal) {
     $(".forecastRow").empty();
 
-    var forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + inVal + "&appid=" + apiKey;
+    var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + inVal + "&appid=" + apiKey;
 
     $.ajax({
       url: forecastUrl,
@@ -162,7 +162,7 @@ $(document).ready(function () {
         forecastCol.append(forecastCard);
         forecastCard.append(cardBody);
 		    var dateTitle = $("<h6 class='card-title hfuture'>" + formatDate + "<h3>");
-	    	var cardIcon = $("<img src='http://openweathermap.org/img/w/" + fiveDay[i].weather[0].icon + ".png'/>");
+	    	var cardIcon = $("<img src='https://openweathermap.org/img/w/" + fiveDay[i].weather[0].icon + ".png'/>");
 		    cardBody.append(dateTitle, cardIcon);
         $(".forecastRow").append(forecastCol);
 
