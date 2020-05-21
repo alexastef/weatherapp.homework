@@ -20,3 +20,17 @@ header {
 #weather {
     margin-top: 15px;
 }
+
+.forecast-card {
+    background-color: blue;
+    color: white;
+}
+
+
+.pfuture {
+    font-size: smaller;
+}
+
+h5.forecast {
+    margin-top: 10px;
+}
